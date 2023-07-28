@@ -58,7 +58,8 @@ defmodule Clarx.MixProject do
       {:tzdata, "~> 1.1"},
       {:argon2_elixir, "~> 3.1"},
       {:ex_machina, "~> 2.7", only: [:dev, :test]},
-      {:faker, "~> 0.17", only: [:dev, :test]}
+      {:faker, "~> 0.17", only: [:dev, :test]},
+      {:dialyxir, "~> 1.3", only: [:dev, :test], runtime: false}
     ]
   end
 
