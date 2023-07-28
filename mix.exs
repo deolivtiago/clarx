@@ -8,7 +8,15 @@ defmodule Clarx.MixProject do
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
-      preferred_cli_env: [ci: :test, "test.reset": :test],
+      preferred_cli_env: [
+        "test.reset": :test,
+        ci: :test,
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ],
+      test_coverage: [tool: ExCoveralls],
       aliases: aliases(),
       deps: deps()
     ]
@@ -68,7 +76,7 @@ defmodule Clarx.MixProject do
         "compile --warnings-as-errors",
         "format --check-formatted",
         "credo --strict",
-        "test"
+        "coveralls --warnings-as-errors"
       ]
     ]
   end
