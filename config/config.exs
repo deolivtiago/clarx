@@ -11,7 +11,7 @@ config :clarx,
   ecto_repos: [Clarx.Repo]
 
 # Configures the repo
-config :api, Api.Repo,
+config :clarx, Clarx.Repo,
   migration_primary_key: [type: :binary_id],
   migration_foreign_key: [type: :binary_id],
   migration_timestamps: [type: :timestamptz]
