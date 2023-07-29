@@ -1,5 +1,10 @@
 defmodule ClarxWeb.Telemetry do
+  @moduledoc false
+
+  # credo:disable-for-this-file
+
   use Supervisor
+
   import Telemetry.Metrics
 
   def start_link(arg) do

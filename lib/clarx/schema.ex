@@ -3,6 +3,7 @@ defmodule Clarx.Schema do
   Define a module to be used as base schema.
   """
 
+  # credo:disable-for-next-line
   defmacro __using__(_) do
     quote do
       use Ecto.Schema
