@@ -17,6 +17,7 @@ defmodule Clarx.MixProject do
         "coveralls.html": :test
       ],
       test_coverage: [tool: ExCoveralls],
+      dialyzer: [plt_file: {:no_warn, "priv/plts/dialyzer.plt"}],
       aliases: aliases(),
       deps: deps()
     ]

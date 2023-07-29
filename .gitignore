@@ -25,6 +25,10 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 clarx-*.tar
 
+# Ignore dialyzer plt files
+/priv/plts/*.plt
+/priv/plts/*.plt.hash
+
 # Ignore editor files
 /.vscode/
 /.elixir_ls/
